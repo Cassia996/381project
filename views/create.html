@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/layui/css/layui.css'/>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <!-- <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p> -->
+    <div class="layui-main">
+      <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+        <legend>Create New Restaurant</legend>
+      </fieldset>  
+      <form class="layui-form" action="" method="post" enctype="multipart/form-data">
+        <div class="layui-form-item">
+          <label class="layui-form-label">name</label>
+          <div class="layui-input-block">
+            <input type="text" name="name"  autocomplete="off" class="layui-input">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">screet</label>
+          <div class="layui-input-block">
+            <input type="text" name="screet"  autocomplete="off" class="layui-input">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">zipcode</label>
+          <div class="layui-input-block">
+            <input type="text" name="zipcode"  autocomplete="off" class="layui-input">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">photo</label>
+          <div class="layui-input-block">
+            <input type="file" name="photo">
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <div class="layui-input-block">
+            <button class="layui-btn" lay-submit="" lay-filter="demo2">create</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

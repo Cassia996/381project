@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/layui/css/layui.css'/>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <!-- <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p> -->
+    <div style="padding: 20px; background-color: #F2F2F2;">
+      <div class="layui-row layui-col-space15">
+        <div class="layui-col-md12">
+          <div class="layui-card">
+            <div class="layui-card-header">photo</div>
+            <div class="layui-card-body">
+              <img src="<%= detail.photo.replace('public','') %>" alt="" style="width:150px">
+            </div>
+          </div>
+          <div class="layui-card">
+            <div class="layui-card-header">name</div>
+            <div class="layui-card-body">
+              <%= detail.name %>
+            </div>
+          </div>
+          <div class="layui-card">
+            <div class="layui-card-header">screet</div>
+            <div class="layui-card-body">
+              <%= detail.screet %>
+            </div>
+          </div>
+          <div class="layui-card">
+            <div class="layui-card-header">zipcode</div>
+            <div class="layui-card-body">
+              <%= detail.zipcode %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="layui-btn" lay-submit="" lay-filter="demo2" onclick="window.location.href='/detail/remove?id=<%=detail._id %>'">Remove</button>
+    </div> 
+  </body>
+</html>

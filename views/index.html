@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/layui/css/layui.css'/>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <!-- <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p> -->
+    <div class="layui-main">
+      <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+        <legend>index</legend>
+      </fieldset>  
+      <button type="button" class="layui-btn" onClick="window.location.href='/create'">Create New Restaurant </button>
+      <% restaurants.forEach(function(res){ %>
+      <a href="/detail?id=<%= res._id%>">
+        <div class="layui-card" style="margin-top:20px">
+          <div class="layui-card-header"><%= res.name %></div>
+          <div class="layui-card-body">
+            <img src="<%= res.photo.replace('public','') %>" alt="" style="width:150px">
+          </div>
+        </div>
+      </a>  
+      <% }); %>
+    </div>
+  </body>
+</html>
